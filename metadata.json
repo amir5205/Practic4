@@ -1,0 +1,6 @@
+{
+  "name": "Презентация: Анализ уязвимостей и датасет CVE/CWE",
+  "description": "Интерактивная презентация практической работы №2 по анализу уязвимостей (SAST/DAST, Python, C++, JS) и построению датасета с корреляцией CVE/CWE",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
