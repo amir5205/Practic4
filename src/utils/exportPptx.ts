@@ -1,9 +1,11 @@
-import pptxgen from 'pptxgenjs';
 import { SLIDES } from '../data/slidesData';
 import { VULNERABILITIES_DATASET } from '../data/dataset';
 
 export async function exportToPptx(): Promise<void> {
-  const pres = new pptxgen();
+  // Dynamically import pptxgenjs on demand to keep initial bundle ultra-fast and free of Node polyfill stubs
+  const pptxgenModule = await import('pptxgenjs');
+  const PptxGenJS = (pptxgenModule.default || pptxgenModule) as any;
+  const pres = new PptxGenJS();
 
   pres.layout = 'LAYOUT_16x9';
   pres.author = 'Студент (rimot)';
